@@ -1,0 +1,340 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ofertas | Prendas Olmo</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#394d14",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-tint": "#5e5e5e",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "primary-fixed": "#e2e2e2",
+                        "background": "#fcf9f8",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-fixed": "#131f00",
+                        "on-secondary-container": "#546a2e",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1b1b1b",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "primary": "#000000",
+                        "secondary-fixed-dim": "#b6d088",
+                        "tertiary": "#000000",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed": "#d2eca2",
+                        "secondary-container": "#cfe99f",
+                        "inverse-surface": "#313030",
+                        "surface-container": "#f0eded",
+                        "surface": "#fcf9f8",
+                        "on-primary-container": "#848484",
+                        "on-tertiary-container": "#838484",
+                        "surface-container-low": "#f6f3f2",
+                        "error": "#ba1a1a",
+                        "secondary": "#50652a",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-surface-variant": "#4c4546",
+                        "outline": "#7e7576",
+                        "inverse-primary": "#c6c6c6",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#1a1c1c",
+                        "outline-variant": "#cfc4c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max-width": "1440px",
+                        "margin-desktop": "80px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                        "section-gap": "160px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "display-xl": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "display-xl-mobile": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "display-xl-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .image-zoom:hover img {
+            transform: scale(1.05);
+        }
+        .input-underline {
+            border-bottom: 1px solid #000;
+            background: transparent;
+            outline: none;
+            transition: border-width 0.2s;
+        }
+        .input-underline:focus {
+            border-bottom-width: 2px;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-20 bg-surface border-b border-outline-variant z-50 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max-width mx-auto">
+<div class="flex-1 flex gap-8 items-center hidden md:flex">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Mujer</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Hombre</a>
+</div>
+<div class="flex-shrink-0">
+<h1 class="font-headline-md text-headline-md font-medium tracking-tighter text-primary">Prendas Olmo</h1>
+</div>
+<div class="flex-1 flex justify-end items-center gap-6">
+<div class="hidden lg:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Colecciones</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Nosotros</a>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-primary hover:text-secondary transition-colors">search</button>
+<button class="material-symbols-outlined text-primary hover:text-secondary transition-colors">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined text-primary">menu</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMJe1F0ss-dfziIKFWQvPOjJlvx1y-UM-HRBVASSFOuS3VfWMkMhiDmGGecxyx2PR2gTzaHHoYJ-P8X318MgYa_3MOk9J8zS4tLBuV9aajVkmqwq6XVhAVocNtTZSj3ePaOcrsR48FtK35cu8NlhKLbCr4Op9UQSrRvwMYSsY-_TOGONMNeX4cpYeHQ6DPpMCp71CctyjWlSCO6p2Q7EqjUG33rpW9cYdtblxzdrLcF_Uuv_llx9kk8Ptt3n2VoqO08o-gQQoa0dM">
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-container-max-width mx-auto text-on-surface">
+<div class="max-w-xl bg-surface/80 backdrop-blur-sm p-stack-lg md:p-12">
+<p class="font-label-caps text-label-caps tracking-widest text-secondary mb-4">MOMENTO EXCLUSIVO</p>
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-6">Ofertas Seleccionadas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">Una curaduría de piezas atemporales en cuero y textiles nobles, disponibles con beneficios especiales por tiempo limitado.</p>
+<a class="inline-block bg-primary text-on-primary font-button text-button px-10 py-4 hover:bg-secondary transition-colors duration-300" href="#productos">Explorar la Colección</a>
+</div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto" id="productos">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-gutter">
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Precio Especial</h3>
+<p class="text-on-surface-variant">Calidad artesanal para perdurar.</p>
+</div>
+<div class="flex gap-8 border-b border-outline-variant pb-2 w-full md:w-auto">
+<button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-2">Todos</button>
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2">Marroquinería</button>
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2">Accesorios</button>
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2">Textiles</button>
+</div>
+</div>
+<!-- Bento / Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Product -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container mb-stack-sm image-zoom">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A luxury tan leather tote bag displayed on a white marble slab with soft natural window light, highlighting the premium grain and gold hardware of the leather. The setting is a minimalist, high-end studio with clean lines and neutral tones, evoking a sense of quiet luxury and artisanal craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFs3KO6DaFiI9GmotylnuooHWZcceoCy-rTeZmbSIQ8pBaGJS54TOKzagrF2hvn1OTPI38TRjTmyimqFqkSEI-_WT7FiWga-bS66hxOOxSdg1kMi4yA1mBX0brCKAQDxvfyu047Ue_8-EB6hA-y9DTXQRrz_ZVrojJ_7MX005jLWel8XI1T2vu9fgUcy3LYLUsHREdWg7Be9A51PVWLR-QWwU_iyUVAQkrZSGnPEJw_ZE1dPxbUSBg0w6WDEguHoWWs01frrWoaFM">
+</div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">OFERTA</p>
+<h4 class="font-body-lg text-body-lg font-medium">Bolso Tote Signature</h4>
+<p class="text-on-surface-variant font-body-md mt-1">Cuero Vacuno de Grano Entero</p>
+</div>
+<div class="text-right">
+<span class="text-on-surface-variant line-through text-sm">$450.00</span>
+<p class="font-body-lg text-body-lg font-bold">$315.00</p>
+</div>
+</div>
+</div>
+<!-- Vertical Product -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-stack-sm image-zoom">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A sophisticated men's leather belt and matching cardholder set in a rich caramel brown, presented on a minimalist wooden surface. The lighting is soft and moody, casting elegant shadows that emphasize the texture and quality of the stitching. This image fits a luxury brand aesthetic with its muted colors and professional composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIYwoQARe8Bbrz7c8vUoxWBt3D_MPNoSaf-wKjQvMrGI4kGkGECK18X1V_-Z4TD9CjQqlsAyFgpicnCJW9Wyga-HOTv3wgDG1isSLwiWT6rPYcRTcc-Ocs5uzPFkiuCkkTz2lfKC-olzKcthWoEGoSZ9C_dJfYr3HvFTSw3YOv696qj8rbKGeYSgoxNhlF1_paO3kiNOOID_iJso8_KlYERZTC8mP6uBl0VRpBShzcKTQZLvA6fRPjeTBwXyAFDB3nsVd4Y98ILM4">
+</div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">OFERTA</p>
+<h4 class="font-body-lg text-body-lg font-medium">Set de Viaje Minimal</h4>
+</div>
+<div class="text-right">
+<span class="text-on-surface-variant line-through text-sm">$180.00</span>
+<p class="font-body-lg text-body-lg font-bold">$125.00</p>
+</div>
+</div>
+</div>
+<!-- Regular Grid Items -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container mb-stack-sm image-zoom">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Close-up of a dark olive green cashmere scarf folded neatly on a textured linen background. The fabric's soft fibers are visible under crisp, clean studio lighting. The color palette is earth-toned and sophisticated, reflecting a professional and high-fashion minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy2FjxuANJP5scVsFV0c8pC_FIeX-HBQiPOEjXFhBxR1-b4A9nzcteEyipo4_4hBe11phXzG9vS4I4B70r3WymFTtnPD91HhRtU64pfVeoQXCsc5JMbeu5XYmFl5ig-amoS4sfSrq3F5jxF5XjJRVhybMVkNvExt2DsQlY6HNtaz9LCN2VD86JxKtI41asp4291ZWy1LhWS-VVuaE4SMxe6qbEoMVDIbPP_CeL6Jw8M3iYLy10gUNNWwl3pHhVdG5EcN-s9u3Mfzs">
+</div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">OFERTA</p>
+<h4 class="font-body-lg text-body-lg font-medium">Bufanda de Cashmere</h4>
+</div>
+<div class="text-right">
+<p class="font-body-lg text-body-lg font-bold">$85.00</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container mb-stack-sm image-zoom">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A premium leather wallet in deep mahogany brown with hand-stitched detailing, opened to show its inner compartments against a light gray concrete surface. The style is modern and industrial, focusing on durability and fine materials within a minimalist visual framework." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6vd1DZ_uElEwCzXPEWWAw78HM_6m-NiQjic_2pZOWED9J3OusMRTsOVlyWGC_7FjjTeRIMQBy6SNjrtJMUVlh6xEjbrO_ClcVaGGQsWIuJ8pTIYce9YiCtFGe2NX19O54cLV1LUJ_UQv1KEQJQ5p9NFd3E3KrGCU090BifKgcrL2OeHFihDZeSlHvVsJC9OJK4PzTsAfY5KXUgJYjyQKq75nJ8iAYkhV7KEkoGKygMTZNqO9VLT4SzNYtnEhDocYfbg-2pSO9ybA">
+</div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">OFERTA</p>
+<h4 class="font-body-lg text-body-lg font-medium">Billetera Vertical</h4>
+</div>
+<div class="text-right">
+<p class="font-body-lg text-body-lg font-bold">$95.00</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-surface-container mb-stack-sm image-zoom">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="High-resolution shot of a white organic cotton shirt hanging on a minimalist brass hanger against an off-white plaster wall. The lighting creates subtle tonal variations in the fabric, emphasizing its purity and luxury quality. The overall mood is serene and curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPb66acQgehf4lK49QTqmxUhgXlbWVBz-UANsMyE7ThW7w1dXVCu2xtMrCVlGOkt-ybH8mx87FexUdeK4sqhRtLTiMqPBrSpk2rTvDdroBTBHl3tsnY0UD64tN9-43JkOMweAviO34G39cicn7xCLWBHE8lZjCb7UL3TraYVzLajEgTP--LxyVGJqM8AaZhIv9N9LI7hHBzAulyfndzE1AGvOUFsCzakDBgoysBhfV5mJDF856hbfuJcqEdKCzo5XRhR6srKfDXIE">
+</div>
+<div class="flex justify-between items-start pt-2">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-1">OFERTA</p>
+<h4 class="font-body-lg text-body-lg font-medium">Camisa Lino Orgánico</h4>
+</div>
+<div class="text-right">
+<p class="font-body-lg text-body-lg font-bold">$110.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">mail</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Acceso Anticipado</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">Suscríbete para recibir notificaciones exclusivas sobre nuevas piezas en nuestra sección de ofertas y colecciones de temporada.</p>
+<form class="w-full max-w-md flex flex-col md:flex-row gap-6">
+<input class="flex-grow input-underline font-body-md py-3 text-on-surface" placeholder="Tu correo electrónico" type="email">
+<button class="bg-primary text-on-primary font-button text-button px-8 py-3 hover:bg-secondary transition-colors duration-300" type="submit">Suscribirse</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">Prendas Olmo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant pr-4">Diseño consciente y materiales nobles para una vida con propósito.</p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-label-caps text-label-caps text-primary mb-2">Compañía</p>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Sostenibilidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Prensa</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Artesanos</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-label-caps text-label-caps text-primary mb-2">Soporte</p>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Términos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-opacity opacity-80 hover:opacity-100" href="#">Envíos</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="font-label-caps text-label-caps text-primary mb-2">Síguenos</p>
+<div class="flex gap-4">
+<a class="opacity-80 hover:opacity-100 transition-opacity text-primary" href="#">Instagram</a>
+<a class="opacity-80 hover:opacity-100 transition-opacity text-primary" href="#">Pinterest</a>
+</div>
+<p class="mt-8 font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 Prendas Olmo. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll behavior for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+            }
+        });
+
+        // Simple Fade In Intersection Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
