@@ -1,0 +1,289 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nuevas Colecciones | Prendas Olmo</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#394d14",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-tint": "#5e5e5e",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "primary-fixed": "#e2e2e2",
+                    "background": "#fcf9f8",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary-fixed": "#131f00",
+                    "on-secondary-container": "#546a2e",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-primary-fixed": "#1b1b1b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#b6d088",
+                    "tertiary": "#000000",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-fixed": "#d2eca2",
+                    "secondary-container": "#cfe99f",
+                    "inverse-surface": "#313030",
+                    "surface-container": "#f0eded",
+                    "surface": "#fcf9f8",
+                    "on-primary-container": "#848484",
+                    "on-tertiary-container": "#838484",
+                    "surface-container-low": "#f6f3f2",
+                    "error": "#ba1a1a",
+                    "secondary": "#50652a",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-surface-variant": "#4c4546",
+                    "outline": "#7e7576",
+                    "inverse-primary": "#c6c6c6",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "surface-dim": "#dcd9d9",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#1a1c1c",
+                    "outline-variant": "#cfc4c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max-width": "1440px",
+                    "margin-desktop": "80px",
+                    "stack-sm": "8px",
+                    "stack-lg": "48px",
+                    "section-gap": "160px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "button": ["Montserrat"],
+                    "display-xl": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "display-xl-mobile": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-caps": ["Montserrat"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "display-xl-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-zoom { transition: transform 20s ease-out; }
+        .hero-container:hover .hero-zoom { transform: scale(1.1); }
+        .product-card:hover img { transform: scale(1.05); }
+        .transition-slow { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-20 bg-surface dark:bg-surface-container-highest border-b border-outline-variant dark:border-outline z-50 transition-all duration-200 ease-in-out">
+<nav class="flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<div class="flex-1 flex gap-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary-fixed border-b border-primary dark:border-on-primary-fixed pb-1 hover:text-secondary transition-colors duration-300" href="#">Colecciones</a>
+<a class="hidden md:block font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Mujer</a>
+<a class="hidden md:block font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Hombre</a>
+</div>
+<div class="font-headline-md text-headline-md font-medium tracking-tighter text-primary dark:text-on-primary-fixed uppercase">
+                Prendas Olmo
+            </div>
+<div class="flex-1 flex justify-end items-center gap-gutter">
+<button class="transition-all duration-200 ease-in-out opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined text-primary dark:text-on-primary-fixed">search</span>
+</button>
+<button class="transition-all duration-200 ease-in-out opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined text-primary dark:text-on-primary-fixed">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full overflow-hidden hero-container">
+<div class="absolute inset-0 bg-black/10 z-10"></div>
+<img alt="Prendas Olmo boutique interior" class="absolute inset-0 w-full h-full object-cover hero-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdDBqglo2hyIeLMhEIOSn0P6I7-xEluJeV3Q8N6HOT4H8sGg8zu0iMZrHre8jQb6JCY7QnuBCp1aVSP4PCuuBcIGreTHg7AKK-46XqDn0OAXhqlbXT3GXXaQSAPVFpYjRCMNNLNYx5uXhYVAgOyNEUTVRqtKU2bgw_UWatWk-ioswVRUMPGw_NCfApUM-4FCuph9TGVsDyRcSTb0jwcAarEpDyo9Tbk6CZlGdJpm13MsCwmsensEKJHK4gygiqII-YrkDvUxUbEcY">
+<div class="relative z-20 h-full flex flex-col justify-end items-start px-margin-desktop pb-stack-lg max-w-container-max-width mx-auto">
+<span class="font-label-caps text-label-caps text-white mb-stack-sm tracking-[0.3em]">DESCUBRE LO NUEVO</span>
+<h1 class="font-display-xl text-display-xl text-white max-w-3xl leading-none mb-stack-md">Nuevas Colecciones</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-xl mb-stack-lg">
+                    Una oda al minimalismo editorial y la herencia artesanal colombiana. Diseños pensados para la permanencia y el lujo silencioso.
+                </p>
+</div>
+</section>
+<!-- Brand Intro -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5 mb-stack-lg md:mb-0">
+<span class="font-label-caps text-label-caps text-secondary mb-stack-sm block">FILOSOFÍA OLMO</span>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md leading-tight">El arte de la sastrería moderna.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">
+                    Nuestras nuevas piezas exploran la intersección entre la estructura arquitectónica y la fluidez orgánica del lino. Cada prenda es confeccionada por manos expertas que valoran la perfección en cada puntada.
+                </p>
+<div class="h-px w-20 bg-primary"></div>
+</div>
+<div class="col-span-12 md:col-start-7 md:col-span-6">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-slow hover:scale-105" data-alt="Close up of a high quality linen blazer on a wooden rack in a sunlit boutique. The texture of the fabric is clearly visible, showing the fine weave and olive green tone against a minimalist white background. The lighting is soft and natural, emphasizing the premium quality of the material." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVIdRil_vsevhxMQdKBark-wV5NidhgGoTNMaxRkO23csucz0TeEGTqbaHaOe-sEQkC_Me2W6kow5H_PsDD5UeeV4yWWDeUKxeFIgD9dHU_PvAyegxt5z23Nn0e50h6jrPu8x3FY8uJ7HYaIy536vgxlAZwbvVA0eHZjN2Xp3FqpE_geyeu-IE1__b1Fkh4sz_oTrysUO2VUmPzZbZ4qupCtKzmcqh9ee8lBnEjWemPEolDobMm79LIBesw8l0HzwJGQD9C99UyL0">
+</div>
+</div>
+</section>
+<!-- Product Grid - Bento Style -->
+<section class="pb-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex justify-between items-end mb-stack-lg">
+<h3 class="font-headline-md text-headline-md">Selección Editorial</h3>
+<a class="font-label-caps text-label-caps border-b border-primary pb-1 hover:text-secondary transition-colors" href="#">VER TODO</a>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Large Feature Item -->
+<div class="col-span-12 md:col-span-7 group product-card">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container mb-stack-sm">
+<img class="w-full h-full object-cover transition-slow" data-alt="A full-length editorial shot of a woman wearing a minimalist off-white linen dress and an olive green tailored blazer. She is standing in a spacious modern architectural setting with concrete walls and large tropical plants. The mood is sophisticated and quiet luxury, reflecting the Colombian high-end fashion aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJzXzZtJ_3MeIpGzzo5XLBN3GjRa40cq4eMgHDjENVeUEb0J1jyAtrIBZ40eBCXSuE7vVKzdfNEVb6gJ_OLN9DecYk48cU5hwXGffcP-0ItSW2yzBi6GnePXrH1Lb33xkI_eNdKmdcyWkllaBB-4Ly6x90ZEct0yQuY91rF4Rt7k154NrU17dlJDNmQQ73kC81M6IIS2Z7qjAUcu6XHNkzOeGsSH0TxRB7sxJ4zdJWHQ8L_evibweEMRgzM5lygnbxkKwO2Eefowo">
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-body-lg text-body-lg font-medium">Conjunto Sastre Olmo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lino 100% Orgánico</p>
+</div>
+<span class="font-label-caps text-label-caps font-bold">$1.450.000 COP</span>
+</div>
+</div>
+<!-- Small Items Column -->
+<div class="col-span-12 md:col-span-5 grid grid-rows-2 gap-gutter">
+<!-- Item 2 -->
+<div class="group product-card">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-sm">
+<img class="w-full h-full object-cover transition-slow" data-alt="Artisan-crafted woven leather bag in a rich mahogany brown, displayed on a minimalist stone pedestal. The lighting is focused and dramatic, highlighting the intricate texture of the hand-woven leather. The style is clean and high-fashion, suitable for a luxury boutique environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC68OmRPNj6um0kbeJD4fUAydFdkOl68SAZx4kmY7tj6gUdUELNP-k1RjfQg15qitlR3BZUeEMlxpnPFTUOr62YLs-XCrMNqrnhuRIG5tixJJqxyHSBApOSJWmSruCWVNZraBs8zyoK5GlJtjst85QWsl2X6hbNv6fQgpGT71cBDGXuTcueZp49nS8mDSXiIlPbuU4WtwqbVWgh8h8WxEv4--K8CTtu64PCQsxpJG2F-zhWV1rWxtLUejIEOb6DIx_S9uhFpI4r4wo">
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body-md text-body-md font-medium">Bolso Tejido Artesanal</h4>
+<span class="font-label-caps text-label-caps">$890.000 COP</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group product-card">
+<div class="aspect-[3/2] overflow-hidden bg-surface-container mb-stack-sm">
+<img class="w-full h-full object-cover transition-slow" data-alt="A pair of elegant minimalist leather sandals in tan color, placed neatly on a light wood floor next to a palm leaf. The shot is overhead and clean, emphasizing the simplicity and craftsmanship of the design. The overall aesthetic is warm, organic, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqf9q8rG-Rng675Iy-tnXfH3Fa0S_ZJgFo3fwfLCKNT4RJ5lcNHnsJ2KUj029-06YChkXzAgKZ40VGMJZ6RhFrysHvfnyPYbsqogttt0qtwkZkT5pHONURvTSDLlpanv35vuHw1DsFuJeKl19gY_NDgpu89bFLEpRJDehMc7yMadGEDtS4Mfp6j1Mldc_sCyIkKsYnXHmJvanWsN0N9RpFV6nPeH2Pk5MxO-0jFt1P5dHSShxTPzfDtWFSphlu2z35LGhUrSABfY4">
+</div>
+<div class="flex justify-between items-start">
+<h4 class="font-body-md text-body-md font-medium">Sandalia Minimalista Cuero</h4>
+<span class="font-label-caps text-label-caps">$420.000 COP</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="bg-surface-container-low py-stack-lg">
+<div class="px-margin-desktop max-w-container-max-width mx-auto text-center py-stack-lg">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-stack-sm block">EL CLUB OLMO</span>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Sea el primero en recibir exclusivas.</h2>
+<div class="max-w-md mx-auto relative mt-stack-md">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-primary px-0 py-stack-sm focus:ring-0 focus:border-b-2 font-label-caps placeholder:text-outline text-center transition-all" placeholder="SU CORREO ELECTRÓNICO" type="email">
+<button class="mt-stack-md px-margin-mobile py-stack-sm bg-primary text-white font-button text-button hover:bg-secondary transition-colors duration-300">SUSCRIBIRSE</button>
+</div>
+</div>
+</section>
+<!-- Gallery / Masonry Feel -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div class="aspect-[3/4] bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional fashion photograph showing a close-up of a neutral toned knit sweater hanging on a black metal rack. The lighting is bright and airy, with soft shadows that emphasize the texture of the wool. The background is a clean white wall, creating a sophisticated gallery-like atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWg_iwH8ONGlqS56T_s17ZYYcLvS_vwgrUXq5_EAQ7V2fY6zUcI8J9ti5PXlE3O_Uj5Gxu_ADTrgsLLpfLOTj_ZCR_aWjKZBU3QxediyOowqPxVWmrRXasFH9N9caEOAhNUx3nQBMdtS4X06ViKvySivB8FWT6Y1mR2wkagJ_dTvBaCiLpODSl_Fyne_vJIjThG5Ilu9UtAlrDhNRicEV6C56MR61ewM8EqnaYbWLXj08n0ONb4zbmOH_WiDgNNH_89j6MUMdii88">
+</div>
+<div class="aspect-[3/4] bg-surface-dim overflow-hidden mt-stack-lg md:mt-24">
+<img class="w-full h-full object-cover" data-alt="A wide shot of a modern clothing boutique interior with high concrete walls and minimalist wooden display tables. Natural light floods the space through a large window, illuminating racks of high-end garments in earth tones. Several large potted monstera plants add a touch of organic green to the industrial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8SY_TGz5-P9_QE3ZClhXTPqG0S78apze08rgS-LOw6grGx32W5gfuyI24CQHaEaarT2UU8h3OVi8Jpqw5N-gCRaNYmDnZZ5Vi7mYRJHNOHE1vfBL_dKhKXHdHGsMZyDJpZV-1YPMy8sYAW4HyccoT-Xu0APcUNZIGWtWy0doFFq1avQrHFf0brNlTcZu_LW7S2pwMIssCacAzSfmwE_gTRt-RJVNSq6kVimhwxjciofQLmus2R2RAGoA_7G9ZopTsN_Se-hgtXq4">
+</div>
+<div class="aspect-[3/4] bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An artistic detail shot of hands carefully folding a crisp white linen shirt on a wooden table. The focus is sharp on the fabric's weave and the precision of the fold, suggesting themes of care and quality craftsmanship. The color palette is warm and monochromatic with natural wood and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ8-pZkf6kQREl_z2fKblaDBuJqR-9Fuya45EMwjjZ9O42ynrUek3WDHwZ1d8EyrlA2Ndg0_8f8V-79dWEzosH6pOiCLVyUZdSGG2OJ-tMHrqxh1hfdaT-FKZSjtHGcFb0LisOnDAO5DkDllGgzX2ALtbzYItqA_vmIv-kqdqXXxUsIJbvhtIBVbNVWuEOKmUNPGYlXLPhosVE0U-rD3d2hgxn-pNoJvzuwdaENo1jbXEuaKfcqfgTVGoIglcumiUimIQSBLTxTyA">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop w-full max-w-container-max-width mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-stack-sm">
+<div class="font-headline-md text-headline-md text-primary dark:text-on-primary-fixed mb-stack-sm">Prendas Olmo</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Moda lenta, piezas eternas. Inspirado en el paisaje y la artesanía colombiana.</p>
+</div>
+<!-- Navigation -->
+<div class="flex flex-col gap-stack-sm">
+<div class="font-label-caps text-label-caps text-primary font-bold mb-stack-sm">COMPAÑÍA</div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Nosotros</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Sostenibilidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Prensa</a>
+</div>
+<!-- Support -->
+<div class="flex flex-col gap-stack-sm">
+<div class="font-label-caps text-label-caps text-primary font-bold mb-stack-sm">SOPORTE</div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Contacto</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Términos</a>
+</div>
+<!-- Social -->
+<div class="flex flex-col gap-stack-sm">
+<div class="font-label-caps text-label-caps text-primary font-bold mb-stack-sm">SÍGUENOS</div>
+<div class="flex gap-stack-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop w-full max-w-container-max-width mx-auto mt-stack-lg border-t border-outline-variant/30 pt-stack-sm">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 Prendas Olmo. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('h-16', 'shadow-sm');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>
