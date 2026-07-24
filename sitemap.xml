@@ -6,28 +6,34 @@
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://tudominio.com/pages/mujer.html</loc>
+      <loc>https://tudominio.com/mujer/</loc>
       <lastmod>2026-07-24</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tudominio.com/pages/hombre.html</loc>
+      <loc>https://tudominio.com/hombre/</loc>
       <lastmod>2026-07-24</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tudominio.com/pages/colecciones.html</loc>
+      <loc>https://tudominio.com/colecciones/</loc>
       <lastmod>2026-07-24</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tudominio.com/pages/ofertas.html</loc>
+      <loc>https://tudominio.com/ofertas/</loc>
       <lastmod>2026-07-24</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tudominio.com/pages/nosotros.html</loc>
+      <loc>https://tudominio.com/nosotros/</loc>
       <lastmod>2026-07-24</lastmod>
       <priority>0.6</priority>
    </url>
+  <url>
+    <loc>https://tudominio.com/contacto/</loc>
+    <lastmod>2023-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
