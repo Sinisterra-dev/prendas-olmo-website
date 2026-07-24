@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -104,28 +103,7 @@
             },
         }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #fcf9f8;
-            color: #1c1b1b;
-        }
-        .hero-zoom:hover img {
-            transform: scale(1.03);
-        }
-        .product-card-img:hover img {
-            transform: scale(1.05);
-        }
-        .filter-border {
-            border-bottom: 1px solid #000000;
-        }
-        .filter-border:focus {
-            border-bottom: 2px solid #000000;
-            outline: none;
-        }
-    </style>
+<link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body class="font-body-md text-body-md antialiased overflow-x-hidden">
 <!-- TopNavBar -->
@@ -151,6 +129,7 @@
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative h-[80vh] w-full overflow-hidden hero-zoom">
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-hero.jpg -->
 <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQvoyOIklcULBODXgkbI11GleZ-tDMKsKSf6ybC5PR9iryxdtil9szqGo9f1SFJYjq3QcSx_Z4xtnPkRQnC55TqgoQWB3lbYnZceIlESZzXvoiW26qTtzMuH0-6nSL-3oZGDwr8FySTC-t-M6wMD2aFWxq-4oapq4u1HrFkDwVJNloQRifrII09qdfWEKoGwRO1Ds3ONYymovUkuSJJE0BV1GBi6FN-jZViGpsHjhqDmc9AkUr42aZRVsZyv-8RtBO2DzooLBABw"/>
 <div class="absolute inset-0 bg-black/10"></div>
 <div class="absolute inset-0 flex flex-col justify-center px-margin-desktop max-w-container-max-width mx-auto text-white">
@@ -205,6 +184,7 @@
 <!-- Product 1: Structured Blazer -->
 <div class="md:col-span-4 group cursor-pointer">
 <div class="aspect-[3/4] overflow-hidden product-card-img mb-6">
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-product-1.jpg -->
 <img class="w-full h-full object-cover transition-transform duration-500" data-alt="A professional fashion photograph of a woman wearing a structured charcoal gray wool blazer with a minimalist silhouette. She is standing against a textured concrete wall with soft, directional lighting that highlights the fabric's quality and the garment's sharp lines. The overall aesthetic is one of quiet luxury and high-end editorial minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJJsuVia4k31Qg-THHPFDCzPkaO7B8wWRkE7lQmvtfZJR-2aFH1mhGDV38uBULtHptHe4u0T2EfRaKS0CYRDcg6SK6484Qx_s6nQCgHsXOGW4mGO_SFlKtgOhKfEKcZXvxSt1OstijWCJvx8-5rLWiIWs0yGTW-TfGypi_QDWVteNBwlfDEqH4DhuwVuipnTIf9FBkm9tCPRxwQuyRGR0H0N8jF-v63BUVt0bC6eSu4qxn3YE7rhE6RUwm6k4lRbNG_Vy1vjTTPaI"/>
 </div>
 <div class="text-center">
@@ -215,6 +195,7 @@
 <!-- Product 2: Linen Dress (Asymmetric emphasis) -->
 <div class="md:col-span-8 group cursor-pointer md:mt-24">
 <div class="aspect-[16/9] overflow-hidden product-card-img mb-6">
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-product-2.jpg -->
 <img class="w-full h-full object-cover transition-transform duration-500" data-alt="An expansive, high-resolution shot of a model in a flowing, oversized cream-colored linen maxi dress. She is captured in a minimalist sunlit courtyard with clean architectural lines and Mediterranean-inspired shadows. The lighting is warm and natural, emphasizing the organic texture of the premium linen fabric. The mood is serene, sophisticated, and intentional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYPvNJEa94PjOvarzpccNvWNkENieHWdEnqot-NaV0_H8deptxW7jYGHgyqC3eMU0tZe0Uic1zAAJski_tK7eXRoqxJvwf2mB6PeU8FuNr3CgI22UeX9i0Qiu6ukLbgSpXwWhMcPEasSLvTiaJNX7qgD2_Puo57Ybo2UCs3M6Dd-lCmeJ6KjVA8P3PCG1xH-_nG-uzRSDfRjJ2XvYa7CLZUq5nbV_1UYHyhtnmjSpTRXyBiLVtCW0unAS9T4GlrwNVrXeO8DYn3mE"/>
 </div>
 <div class="text-left px-4">
@@ -225,7 +206,8 @@
 <!-- Product 3: Minimalist Trousers -->
 <div class="md:col-span-6 group cursor-pointer">
 <div class="aspect-[4/5] overflow-hidden product-card-img mb-6">
-<img class="w-full h-full object-cover transition-transform duration-500" data-alt="A detailed studio photograph showcasing high-waisted, wide-leg trousers in a deep olive green shade. The fabric is a crisp, heavy linen blend that holds its shape, displayed on a model in a pose that emphasizes the fluid drape and elegant tailoring. The background is a flat neutral gray, focusing all attention on the professional craft and material quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-q9uXr33IAiyDYzM_FEsCXRTp3JTl-jj6OPgdj5Ps7KwkQhCGkkzIGXUntuvtprHdKVFSUdvK-_-6HEN6AH1BMTaaFbBZrbxl76cIZx0NB-nuJMN0J5rwUKiOVDRJp3igL-pZe4awS9dnBdlriG6ifNsk09myxxS4Nbnx6MPqwoR8mkeOAbNPVi8fh86sSpZYbcVO_3AtIUFETZs2sjbi06UlbhIRfmYDGnk00FCiNcuBBAZxonDttF3mFSnoQrCU-gGcHiqDsaA"/>
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-product-3.jpg -->
+<img class="w-full h-full object-cover transition-transform duration-500" data-alt="A detailed studio photograph showcasing high-waisted, wide-leg trousers in a deep olive green shade. The fabric is a crisp, heavy linen blend that holds its shape, displayed on a model in a pose that emphasizes the fluid drape and elegant tailoring. The background is a flat neutral gray, focusing all attention on the professional craft and material quality." src="https://lh3.googleusercontent.com/ida-public/AB6AXuB-q9uXr33IAiyDYzM_FEsCXRTp3JTl-jj6OPgdj5Ps7KwkQhCGkkzIGXUntuvtprHdKVFSUdvK-_-6HEN6AH1BMTaaFbBZrbxl76cIZx0NB-nuJMN0J5rwUKiOVDRJp3igL-pZe4awS9dnBdlriG6ifNsk09myxxS4Nbnx6MPqwoR8mkeOAbNPVi8fh86sSpZYbcVO_3AtIUFETZs2sjbi06UlbhIRfmYDGnk00FCiNcuBBAZxonDttF3mFSnoQrCU-gGcHiqDsaA"/>
 </div>
 <div class="text-center">
 <h3 class="font-body-md text-body-md font-medium mb-1 uppercase tracking-wider">Pantalón Palazzo Olmo</h3>
@@ -235,6 +217,7 @@
 <!-- Product 4: Linen Shirt -->
 <div class="md:col-span-6 group cursor-pointer md:-mt-12">
 <div class="aspect-[4/5] overflow-hidden product-card-img mb-6">
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-product-4.jpg -->
 <img class="w-full h-full object-cover transition-transform duration-500" data-alt="An editorial close-up of a crisp white linen shirt with subtle mother-of-pearl buttons. The model is sitting in a relaxed position, with the soft morning light filtering through a window, creating a delicate play of light and shadow on the breathable fabric. The setting is a minimalist interior with muted tones and a sense of calm, timeless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA70caDlNYCZK5iLWM0k_5f33idrxo2OOZpJAzrEUVc6UYgC30fGtyx-Lk78WKLmVD-YN03A_PA9ycDy6o5hhmiSvS2CzVjfE-QAu9OUHLoUJl4Oc4G6WhWIBDYW_MHeW_XtMqol0wOZhtDJYWMuFZP_ldmiKTz1AwHLxw3-xHD_w4bcLPAIfkcV0HNxRg_nwIj7N-g6TNd_h-aOVlEEQ-MAjiMLH7nnPY1CI6_pIF_0dZCiUDItFpbrlUTVTp9trFLdQi1QxsnMEo"/>
 </div>
 <div class="text-center">
@@ -258,7 +241,9 @@
 </div>
 <div class="md:col-span-7 order-1 md:order-2">
 <div class="grid grid-cols-2 gap-4">
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-story-1.jpg -->
 <img class="w-full h-[400px] object-cover" data-alt="A minimalist aesthetic photograph showing a close-up of skilled hands working with a traditional wooden loom. Soft, natural sunlight illuminates the fine fibers of natural linen being woven together. The scene is calm and focused, emphasizing artisanal craftsmanship and the beauty of slow, intentional production within a modern studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtrrPV-hSiM26WQdajwIdxmG_DrfH22pApbHFdLY9hAQeDsoeswKv4XLr_5v_hsWv-JuS-LhBeSxcxc_WkfLCQjEuj7Jaw2N8tTsQfedeAjLXfI4WHaJojEcJcLMEG6810YZQgNB5mQAxtdv2Ab-1G-la_0gB1IMrFm5buc3x6_09j4ndBVvhatX11mKgNa9NSI9y8oxX17UvhBk0Sx6wXYhAQ-D6UcycOUC8re_Q3dhbD_L70ScfXqNG5WREQAbXFo3mnuYtpJzU"/>
+<!-- TODO: Reemplazar con imagen local en ../assets/images/mujer-story-2.jpg -->
 <img class="w-full h-[300px] object-cover mt-12" data-alt="An overhead flat-lay photograph of a designer's workspace featuring swatches of olive green and stone gray fabrics, a pair of heavy tailor's shears, and minimalist architectural sketches of a structured blazer. The composition is clean and organized, set against a light-grained wood surface, reflecting a philosophy of precision and professional craft." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_mNVMADTdjiaYOEHEkTQJGRfdyWWEpZXyGNh9lW5-_hWO1eS6uL45SHV7cauxRxY6X0pN5YFFtNygtxvuf8rAVhw-Oow0KSw2KH7QwCTIFbAUBOIDp8gCD2CM0RSo5us9KuvQxoe7Lk5VlX9Ra2waQ7wShN3TOHnHsvOkxZXbCq-63AAovC9kJpXFOCF8XMxixOKLmgmvcgHu9FrL-X3fH-8ZBbFhaINuMup59Yif0w6l1yRaCewkjfK4KmtRAGJagX3n1k0pZVQ"/>
 </div>
 </div>
@@ -304,17 +289,5 @@
 <p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 Prendas Olmo. Todos los derechos reservados.</p>
 </div>
 </footer>
-<script>
-        // Micro-interaction for scroll header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('h-16', 'shadow-sm');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('h-16', 'shadow-sm');
-                header.classList.add('h-20');
-            }
-        });
-    </script>
+<script src="../js/main.js"></script>
 </body></html>

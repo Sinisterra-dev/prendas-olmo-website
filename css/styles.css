@@ -1,0 +1,121 @@
+/* ===================================
+   Custom Styles for Prendas Olmo
+   =================================== */
+
+/* Material Symbols Outlined - Base Configuration */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Reveal Animation on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Masonry Layout */
+.masonry {
+    columns: 1;
+}
+
+@media (min-width: 768px) {
+    .masonry {
+        columns: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry {
+        columns: 3;
+    }
+}
+
+/* Body Base Styles */
+body {
+    background-color: #fcf9f8;
+    color: #1c1b1b;
+}
+
+/* Hero Zoom Effect */
+.hero-zoom:hover img {
+    transform: scale(1.03);
+}
+
+/* Product Card Image Hover */
+.product-card-img:hover img {
+    transform: scale(1.05);
+}
+
+/* Filter Border Input */
+.filter-border {
+    border-bottom: 1px solid #000000;
+}
+
+.filter-border:focus {
+    border-bottom: 2px solid #000000;
+    outline: none;
+}
+
+/* Image Zoom Effect */
+.image-zoom:hover img {
+    transform: scale(1.05);
+}
+
+/* Minimal Input Style */
+.input-minimal {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    border-radius: 0;
+    transition: border-width 0.2s ease;
+}
+
+.input-minimal:focus {
+    border-bottom-width: 2px;
+    outline: none;
+}
+
+/* Hero Container Zoom */
+.hero-zoom {
+    transition: transform 20s ease-out;
+}
+
+.hero-container:hover .hero-zoom {
+    transform: scale(1.1);
+}
+
+/* Product Card Hover */
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Slow Transition */
+.transition-slow {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Input Underline Style */
+.input-underline {
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    transition: border-width 0.2s;
+}
+
+.input-underline:focus {
+    border-bottom-width: 2px;
+}
+
+/* Masonry Item */
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 24px;
+}
