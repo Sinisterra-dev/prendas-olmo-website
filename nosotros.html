@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nosotros | PRENDAS OLMO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-container": "#546a2e",
+                    "surface-dim": "#dcd9d9",
+                    "surface-bright": "#fcf9f8",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "primary-fixed": "#e2e2e2",
+                    "inverse-surface": "#313030",
+                    "inverse-primary": "#c6c6c6",
+                    "outline": "#7e7576",
+                    "secondary-fixed-dim": "#b6d088",
+                    "tertiary-container": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#cfc4c5",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary": "#000000",
+                    "surface-container-high": "#eae7e7",
+                    "surface-variant": "#e5e2e1",
+                    "surface-tint": "#5e5e5e",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-primary-container": "#848484",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed": "#131f00",
+                    "surface-container": "#f0eded",
+                    "secondary-container": "#cfe99f",
+                    "secondary": "#50652a",
+                    "on-surface-variant": "#4c4546",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed": "#d2eca2",
+                    "on-secondary-fixed-variant": "#394d14",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-background": "#1c1b1b",
+                    "on-primary-fixed-variant": "#474747",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-tertiary-container": "#838484"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "section-gap": "160px",
+                    "margin-desktop": "80px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "20px",
+                    "container-max-width": "1440px",
+                    "stack-md": "24px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "display-xl": ["Playfair Display"],
+                    "button": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-xl-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "display-xl-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center h-20 w-full px-margin-desktop max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-medium tracking-tighter text-primary dark:text-inverse-primary">
+                PRENDAS OLMO
+            </div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Mujer</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Hombre</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Colecciones</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Nosotros</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Nuestra historia hero image" class="w-full h-full object-cover brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7GoNaiqr9BHMLEFt8rTnhCGGau2Fq_Sh5dfojQIY31AmNBUHLb6agKdBq4sjKYtx7RNmcxBG_2Um8hWXMeARh7pPk-ME0FWYVk4FVN2uDAYE93mEHmD2yG0XHEP-g6CISxmdmfea8dIHV7cr3PB_oPy-hg2CDH47SKMhs2kBD03aWQseZy5uoY_yejZGeFTipioyRlOX0zgd6wwlccc4W4CNGFcEA7fWvLXLefTlpplw5Q2wOipebTlyYuuH11j4uPDezfbWPxYg"/>
+</div>
+<div class="relative z-10 w-full max-w-container-max-width mx-auto px-margin-desktop">
+<div class="max-w-2xl bg-surface/80 backdrop-blur-sm p-stack-lg md:p-20 reveal">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary mb-stack-md">
+                        Nuestra historia
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        En Prendas Olmo creemos que vestir bien es una forma de expresar quién eres. Queremos ofrecer prendas que combinen estilo, comodidad y calidad para acompañarte en cada momento de tu vida.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 2: Quiénes somos -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-start-2 md:col-span-10 text-center reveal">
+<span class="font-label-caps text-label-caps text-secondary block mb-stack-sm">MANIFESTO</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">Quiénes somos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl mx-auto leading-loose">
+                        Prendas Olmo nació con el propósito de ofrecer ropa moderna, cómoda y de excelente calidad para mujeres y hombres. Nuestro compromiso es brindar una experiencia cercana, con atención personalizada y prendas que se adapten a diferentes estilos, ocasiones y presupuestos.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Misión y Visión -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="reveal flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-on-secondary-container">
+<span class="material-symbols-outlined text-4xl" data-icon="target">target</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Misión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Brindar prendas de vestir que permitan a nuestros clientes sentirse seguros, cómodos y con estilo, ofreciendo productos de calidad y un servicio excepcional.
+                        </p>
+</div>
+<div class="reveal flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center mb-stack-md text-on-secondary-container">
+<span class="material-symbols-outlined text-4xl" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Visión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Convertirnos en una tienda de referencia en moda, reconocida por la confianza de nuestros clientes, la calidad de nuestras prendas y la constante innovación en nuestras colecciones.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Nuestros Valores -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="text-center mb-20 reveal">
+<span class="font-label-caps text-label-caps text-secondary block mb-stack-sm">ÉTICA &amp; TRABAJO</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Nuestros Valores</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-x-gutter gap-y-stack-lg">
+<!-- Value Card -->
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="diamond">diamond</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Calidad</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Excelencia en cada fibra y acabado.</p>
+</div>
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="verified_user">verified_user</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Honestidad</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Transparencia en nuestros procesos y precios.</p>
+</div>
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="support_agent">support_agent</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Atención al cliente</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Cercanía y asesoría personalizada.</p>
+</div>
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="handshake">handshake</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Compromiso</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Dedicación con tu estilo y satisfacción.</p>
+</div>
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="lightbulb">lightbulb</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Innovación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Búsqueda constante de tendencias y mejoras.</p>
+</div>
+<div class="p-stack-lg bg-surface border border-outline-variant/30 hover:border-secondary transition-all duration-500 reveal group">
+<span class="material-symbols-outlined text-3xl mb-stack-md text-secondary" data-icon="favorite">favorite</span>
+<h4 class="font-label-caps text-label-caps text-primary mb-stack-sm">Pasión por la moda</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Amamos lo que hacemos y se nota en cada prenda.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: ¿Por qué elegirnos? -->
+<section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-12">¿Por qué elegir Prendas Olmo?</h2>
+<div class="space-y-stack-md">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-lg text-body-lg">Variedad de estilos</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-lg text-body-lg">Excelente relación calidad-precio</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-lg text-body-lg">Atención personalizada</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-lg text-body-lg">Colecciones en constante renovación</p>
+</div>
+</div>
+</div>
+<div class="relative mt-20 lg:mt-0 reveal">
+<div class="aspect-[4/5] bg-surface-container-highest/10 border border-on-primary/10 p-10 flex flex-col justify-end">
+<p class="font-display-xl text-display-xl opacity-10 absolute top-10 left-10 select-none">OLMO</p>
+<p class="font-headline-md italic leading-tight">"La moda no es algo que solo existe en los vestidos. La moda está en el cielo, en la calle, la moda tiene que ver con las ideas, con la forma en que vivimos."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Nuestro Compromiso -->
+<section class="py-section-gap">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="reveal md:order-2">
+<img alt="Nuestro Compromiso image detail" class="w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrYjOPI-BLCWkGx6MYjzQFYOBLfUwWa_6CnnMtfXwpoSaq4y5pdmZ4UBjA2VgV5eUf-frfMYMl66En_cNHBBFzsaK7LdO-LI3hliNpxJRyLCilbUZaQ1xY43aCX0hxbUI41PBwRXzS5c6k6hOtRWpsSQJF3rH0jFU6HneekJyPw2Me3ucR9tAF2cpXkArrsC16P2MS8YqHyqvQJYXCcauTiivrStsrIGexVdvTWsft9ZhnhXZYlMNcdMXoFVwlajKN38nDIdp4xTM"/>
+</div>
+<div class="reveal md:order-1">
+<span class="font-label-caps text-label-caps text-secondary block mb-stack-sm">FILOSOFÍA</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">Nuestro Compromiso</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Cada cliente es importante para nosotros. Trabajamos cada día para ofrecer prendas seleccionadas con cuidado, pensando en la comodidad, la calidad y las tendencias actuales, para que encuentres exactamente lo que buscas.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Call to Action -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-highest reveal">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg">Descubre la colección perfecta para ti.</h2>
+<div class="flex flex-col sm:flex-row gap-stack-md justify-center mt-12">
+<a class="bg-primary text-on-primary px-10 py-5 font-button text-button hover:bg-secondary transition-colors duration-300 inline-block" href="#">
+                        Ver Catálogo
+                    </a>
+<a class="border border-primary text-primary px-10 py-5 font-button text-button hover:bg-primary hover:text-on-primary transition-all duration-300 inline-block" href="#">
+                        Contáctanos
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto gap-8">
+<div class="font-headline-md text-headline-md font-medium text-primary">PRENDAS OLMO</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Términos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Envíos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Sostenibilidad</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                © 2024 PRENDAS OLMO. EL ARTE DE LA PERMANENCIA.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple Scroll Reveal Logic
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(reveal => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Initial trigger
+        window.onload = revealOnScroll;
+    </script>
+</body></html>
