@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prendas Olmo | Viste con Estilo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1b1b1b",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#4c4546",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-fixed-dim": "#b6d088",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "outline-variant": "#cfc4c5",
+                    "primary": "#000000",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "background": "#fcf9f8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#838484",
+                    "on-background": "#1c1b1b",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "tertiary": "#000000",
+                    "on-primary-container": "#848484",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed": "#d2eca2",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-container": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container": "#f0eded",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#131f00",
+                    "on-secondary-container": "#546a2e",
+                    "surface-tint": "#5e5e5e",
+                    "surface-container-high": "#eae7e7",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-container": "#cfe99f",
+                    "on-primary-fixed-variant": "#474747",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#394d14",
+                    "inverse-primary": "#c6c6c6",
+                    "secondary": "#50652a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#313030",
+                    "outline": "#7e7576",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e5e2e1",
+                    "surface": "#fcf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "container-max-width": "1440px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "20px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Montserrat"],
+                    "display-xl-mobile": ["Playfair Display"],
+                    "button": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "display-xl": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-xl-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .masonry {
+            columns: 1;
+        }
+        @media (min-width: 768px) { .masonry { columns: 2; } }
+        @media (min-width: 1024px) { .masonry { columns: 3; } }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-20 bg-surface dark:bg-surface-container border-b border-outline-variant dark:border-outline z-50 transition-all duration-300 ease-in-out">
+<nav class="flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<div class="flex items-center gap-stack-md">
+<img alt="Prendas Olmo Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwBAeZ8y924m4t1BQ2pdx3Di18N6_3PUbrsblNvlsa1hq2Q9eOUXxbWtSEEym663UEg-xz6XMHmCyw4XjKtlrSJyh1MCHnaTXQvkP2HdWxe-oVlE0iwmaOVsBVk3ShfxdAxA8zfiuzaMng1jQbkKUNvyfTmRM1CaZ6jMkAVVzVhikUTjZolRBmr9AssU1_Ad5R3CZ81PHdHDUeLF7QmuaxL16FF8r9vm5NxBP45p1_rHipRc4IOOfv9LWYvyqZv0YcTNaDBkA87mM"/>
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-on-surface">Prendas Olmo</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-primary dark:text-on-surface border-b border-primary pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Mujer</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Hombre</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Colecciones</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Nosotros</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined">search</span></button>
+<button class="text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
+<button class="md:hidden text-on-surface"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] scale-110 hover:scale-100" data-alt="High-end fashion boutique lifestyle photography. Elegant models wearing high-quality minimalist designer clothing in a luxury architectural setting. 4k resolution, high definition, professional lighting, sharp focus, neutral tones with olive green accents. Hero image style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLOE3XujlXhPVuHQ3YmWwoWPhYab8lW5xIPZluLvPYVNM2zVB_5ReBUFgkbTJANCxEVg4pipQv-9ZOxJylPyzlStR5XD7lR6I39o3gIvsohSGksBY54DLUB06t7Jp_zPRizJTgC6uSboJWKiaN3gyusQlhMqMV6lXca0G86KZ13O4n88Z4MQrL9bzGXVDbaTGRejKcqQA5RcG4SOAj1vMHptXLhBl78k87IQPvPxG2y26oz6Ro_0h5uGzUX-B8-5-UW2S2FfNDqXk')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 px-margin-desktop w-full max-w-container-max-width mx-auto text-white">
+<div class="max-w-2xl reveal">
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl mb-stack-md leading-tight">Viste con estilo, viste con Prendas Olmo</h1>
+<p class="font-body-lg text-body-lg mb-stack-lg opacity-90">Calidad, moda y variedad para mujer y hombre. Elevamos lo cotidiano con piezas de diseño atemporal.</p>
+<div class="flex flex-wrap gap-gutter">
+<button class="px-8 py-4 bg-primary text-on-primary font-button text-button hover:bg-secondary transition-all duration-300 transform hover:-translate-y-1">Ver Catálogo</button>
+<button class="px-8 py-4 border border-white text-white font-button text-button hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1">Contáctanos</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categorías -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container reveal">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="High-definition fashion photography of a sophisticated woman wearing elegant, high-quality clothing. Minimalist background, professional studio lighting, 4k resolution. Category: Moda Femenina." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIKtFJuFwFjbHhqcYCnE1VYa0en33yk371giujSEikuwCW8iDzPSa5LLhGrII6qmoAIR4ywrOM0OpyHh_Zi1F5CzgZ8brEcVDgBR7b1WTVXl1CY-kTs1_oyEMqfJuHc_bm-L8TE9Z-sr7vTeO_2ec636aq9B7Wfml8zh9QBuZezvdyiBspDPIUAOEVfVU9UeLgNMleubAWQB5jKEK2yI-C51qIL9sAhS1Oa5kEdTtv1-vYOw2tG2d3XJpgSfxpL73KIcYuuccFGIM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-white mb-2">Moda Femenina</h3>
+<a class="font-label-caps text-label-caps text-white border-b border-white pb-1" href="#">Explorar</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container reveal" style="transition-delay: 100ms">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="High-definition fashion photography of a stylish man wearing premium tailored clothing. Sharp focus, professional lighting, luxury feel, 4k resolution. Category: Moda Masculina." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1wgou9MoZnyeJi9MgZje-bV0TcgRf8xbYAkDCXKFxQVrJhyb6cwM9xH_cp5XMvOhAdB8MCaceh2Cw-41isJyYGh9Z1OVKCFBJUE6KcFYJNwegwqw-Tj3FTw94vA_NpqAf5ug_G_lY7-Va-3a9JIGcUAoXbWwZTyT23Q-Gaqse2kNUvuD3TkF4-8LaEV2XCVz2vOA5b8yGdP2jkKrl8xEN6wGjoaT-_6y8y2HQX9C21b1aXAwrTFcQV9SBRr-m2lDwtL_dMyteH78')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-white mb-2">Moda Masculina</h3>
+<a class="font-label-caps text-label-caps text-white border-b border-white pb-1" href="#">Explorar</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container reveal" style="transition-delay: 200ms">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of high-quality fabric and modern clothing hanging on a minimalist rack. Sharp textures, professional fashion photography, 4k resolution. Category: Nuevas Colecciones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeUu7rdWctjHtKI005WH9Nu-_I8JNe8G5tXdIGgIV50mZEL3fQZxsfJII6FudGWwcVxUTzWuB5NRb_sJT5hj2r9mlRr7QMewPdN5bzB6qbXQ7XPiJPXyHOXTOGytHhcQlg44gGKwg0mmS1B2nhKG7fFLZp4AIS2jgsOc3PvOjRvT6hGLM0bf0ayV5ykWoTNeuvvoM377xXYWnIchkaDPrbXS_1moHDKTEwBFI5WkMXJOXlfiYqKdJ8Zh-XjMWUtorkkAJglLr1L8Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-white mb-2">Nuevas Colecciones</h3>
+<a class="font-label-caps text-label-caps text-white border-b border-white pb-1" href="#">Explorar</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-surface-container reveal" style="transition-delay: 300ms">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Luxury fashion accessory like a leather belt or bag on a high-end surface. Professional product photography, sharp focus, 4k resolution. Category: Ofertas." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxcTzG00vEoEu00_jj56mddARd8XaXnSXvrqUtmJb-xzlIL_TOcnadqQEK6YISPcwQQ7fQtDI2R8M-GBNfSS7708n1C2SraTQ_xE99eNy8XvKpjXEbFzdbhmYENf0NmI2teaRieNB-ZdQN7NCgtkmGwTMpEZQoGPSXG3SpHJr0UMPHJ9t5NQnCqbcjDi7mguDukgiNwGQstk0m1nheINjdbZu8rCbWCMT0zcr4OAXmeZaKkSEkwQNl3M1kTpc4qEeONKqm75j1pDU')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-white mb-2">Ofertas</h3>
+<a class="font-label-caps text-label-caps text-white border-b border-white pb-1" href="#">Explorar</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Productos Destacados -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex justify-between items-end mb-stack-lg reveal">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Exclusivos</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-2">Productos Destacados</h2>
+</div>
+<a class="hidden md:block font-label-caps text-label-caps border-b border-primary pb-1 hover:text-secondary transition-colors" href="#">Ver todos los productos</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="group bg-white p-4 reveal hover:shadow-xl transition-shadow duration-500">
+<div class="aspect-[4/5] overflow-hidden mb-4 relative">
+<img alt="Professional product photography of a high-end minimalist trench coat (Gabardina) on a plain background. Sharp 4k resolution, luxury fashion catalog style." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl5dRjga59Lnc8PYXdoZCbGfpsyBI-cPz4g__qxVEro6cNr-PvbDO3LwNz1mwww7YlKeH3LnBpOSGXbtu9ocYePjGGXWu1iSV0BsSfXvMCfxnbJWhJWPRlR0Z_Oi8I9xR4XZFuNhvuFx1r6ZbGW8ctkx1Otv_vWj-ltVjKJhzb68mpux3kcrK9VZG7VxIjsNHiPahRBd9yyvf7hEcVvE_PmmWHPTokwbNnpWDpoOkQ-YOAkKRjTFFDe0QSuixvlaqOKCCWbosBkXA"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">favorite</span></button>
+</div>
+<h4 class="font-body-md font-semibold text-primary mb-1">Gabardina Minimalista</h4>
+<p class="font-body-md text-on-surface-variant mb-4">$189.00</p>
+<button class="w-full py-3 border border-primary font-button text-button hover:bg-primary hover:text-white transition-colors duration-300">Ver más</button>
+</div>
+<!-- Product 2 -->
+<div class="group bg-white p-4 reveal hover:shadow-xl transition-shadow duration-500" style="transition-delay: 100ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 relative">
+<img alt="Professional product photography of a premium wool sweater (Jersey de Lana) on a model or mannequin. Sharp 4k resolution, visible high-quality textures." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJFoBanKf4WZn83geJuJpI-1f2j7XCUH-tOG-bs4IpMrMIOwp0OQSTeT9LaUZ2uJQIXBSGCExPQRtma9Oi8J5J2qVlbB6uTsJCX3i_k-W6rhJjAQWbbk7KoP7424jYv_h6FXyD-y4pcAxk0s5ZPdY1Bja1ShGESIzx7AirPifLDouvjytfmLxuAPf-yEQoMTty3tdN2yT_wSpVZLDuX80PRmGse51ekitL9qRz84BHF9vkYF8S1QhCvS000nLBIVn_kHChzhb1b8g"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">favorite</span></button>
+</div>
+<h4 class="font-body-md font-semibold text-primary mb-1">Jersey de Lana Premium</h4>
+<p class="font-body-md text-on-surface-variant mb-4">$125.00</p>
+<button class="w-full py-3 border border-primary font-button text-button hover:bg-primary hover:text-white transition-colors duration-300">Ver más</button>
+</div>
+<!-- Product 3 -->
+<div class="group bg-white p-4 reveal hover:shadow-xl transition-shadow duration-500" style="transition-delay: 200ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 relative">
+<img alt="Professional product photography of ivory tailored trousers (Pantalón Sastre Ivory). Sharp 4k resolution, luxury aesthetic." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsBVVkGqbWgdB-L9xmi1-DAzxxKCr0wNV30Asz1yBBk7C7w-_acyfDojpO4u-i8fTn7ArVO0iwQXyKiahXU9QfipNP3gdpiyYwaajvDhj9z0B6_2c2Ksz5n213dPFrg3tl77koAS_PnVrtbH2XKtFZ-HZL3jpHbEvapYK_NQOZ3natuPGfMHVrlRBT6egTZR41DxXP8HSype1cEvPlvNKH3UHjaBEkIYLXLWlWzYZxb6Drq4ahRMlnUiBcywELHlJespKdyHa-65w"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">favorite</span></button>
+</div>
+<h4 class="font-body-md font-semibold text-primary mb-1">Pantalón Sastre Ivory</h4>
+<p class="font-body-md text-on-surface-variant mb-4">$95.00</p>
+<button class="w-full py-3 border border-primary font-button text-button hover:bg-primary hover:text-white transition-colors duration-300">Ver más</button>
+</div>
+<!-- Product 4 -->
+<div class="group bg-white p-4 reveal hover:shadow-xl transition-shadow duration-500" style="transition-delay: 300ms">
+<div class="aspect-[4/5] overflow-hidden mb-4 relative">
+<img alt="Professional product photography of a structured black blazer. High contrast, sharp 4k resolution, premium tailoring details visible." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxB8nvlE2DDVsAuJxcHkYRhKjXZyYwrQWFIAvT8Y0Ub7yjcK-PY_0NQt462LEw3B4YizA8bIDuPmupsY24kn3F_pRH41LeAYpwGNsIXK76tmzkoLRQVEm6YquhetT6d65xAq2c3cIVXKPlQ6GVfLgXrqKI5aYXm0yHSlxitK5iHC2Lv8xhahCgZ0omBgdNGVykv6XdOLbUWVmEKuCJkcTG3eD_S8Ryk05CRh8Wnrk8IgbAIE2cE-F7zYFh2MxqiYpB69Q5cRLm06k"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">favorite</span></button>
+</div>
+<h4 class="font-body-md font-semibold text-primary mb-1">Blazer Estructurado</h4>
+<p class="font-body-md text-on-surface-variant mb-4">$210.00</p>
+<button class="w-full py-3 border border-primary font-button text-button hover:bg-primary hover:text-white transition-colors duration-300">Ver más</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ¿Por qué elegirnos? -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter text-center">
+<div class="reveal">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">verified</span>
+<h3 class="font-headline-md text-primary mb-2">Excelente calidad</h3>
+<p class="font-body-md text-on-surface-variant">Materiales seleccionados por su durabilidad y tacto premium.</p>
+</div>
+<div class="reveal" style="transition-delay: 100ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">stylus</span>
+<h3 class="font-headline-md text-primary mb-2">Diseños modernos</h3>
+<p class="font-body-md text-on-surface-variant">Vanguardia que respeta la elegancia de lo clásico.</p>
+</div>
+<div class="reveal" style="transition-delay: 200ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">payments</span>
+<h3 class="font-headline-md text-primary mb-2">Precios competitivos</h3>
+<p class="font-body-md text-on-surface-variant">Lujo accesible sin comprometer la integridad del diseño.</p>
+</div>
+<div class="reveal" style="transition-delay: 300ms">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">support_agent</span>
+<h3 class="font-headline-md text-primary mb-2">Atención personalizada</h3>
+<p class="font-body-md text-on-surface-variant">Asesoría experta para encontrar tu estilo ideal.</p>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-section-gap bg-primary text-white overflow-hidden">
+<div class="px-margin-desktop max-w-container-max-width mx-auto">
+<h2 class="font-headline-lg text-center mb-section-gap reveal">Lo que dicen nuestros clientes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="reveal text-center">
+<img class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-2 border-secondary" data-alt="Portrait of a sophisticated woman in her 30s with a warm smile, wearing an elegant silk scarf and olive green jacket. High-end lifestyle photography, soft natural lighting, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZlzHGhQk_kA5_bAeMf9-QV5YYQuA9cVBNHeAB9k0Jc6KF4qkD0WGQ5T3fRtjys5Tl3tbCK35_Kjz4pFtuEkV1HfYiTf7xb4DnAx7Kv529YQnFOMH4X5PZXOv0xzVyNoHw6v0IrDvRzaqURWXg42FEtwm_v0L21LK82kERfdSuNrGLzbfuKShrZBizbbnIBOJ8ETBKD2BLHQ0RgQs33yNKvYLosjxl8ebLjbtqpDfq7kG4fnUVZo6k3DaCejRcRvHUaPYZ3nekMWg"/>
+<p class="font-headline-md italic mb-6">"La calidad de las telas es insuperable. Me siento elegante y cómoda en cada ocasión."</p>
+<p class="font-label-caps">- Elena Martínez</p>
+</div>
+<div class="reveal text-center" style="transition-delay: 100ms">
+<img class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-2 border-secondary" data-alt="Portrait of a modern professional man with a groomed beard, wearing a charcoal grey tailored suit. He looks confident and composed. Soft studio lighting, neutral grey background, high fashion photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6SI_Q-DptGBaWYrz0Vveld0eH6ZoWYtekY93hG8Gyfuub2CY7AeVztgF2i8EYZw5xi9npWMCaG7CoBWnaOCFAo90xDNppTRMtTMA7fH2sOlphlhw70MdiTD7he4REfSzMS2oxdzKElZFK9Xen6g0CGNtaKes4_DQyGICVarg0gA-3rre9w-fflrGCkh6NwMDK1dgu3kvTC4458gO9szsPgO_6_LtixS-XuXB3EjuzZw9Y2TD_4EbZ5B7taw1UuqVuP7RUrEpIne0"/>
+<p class="font-headline-md italic mb-6">"Diseños modernos que realmente destacan. Prendas Olmo se ha vuelto mi tienda favorita."</p>
+<p class="font-label-caps">- Roberto Gómez</p>
+</div>
+<div class="reveal text-center" style="transition-delay: 200ms">
+<img class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-2 border-secondary" data-alt="Portrait of a stylish young woman with a minimalist aesthetic, wearing a white oversized shirt and gold jewelry. She has a serene expression. Bright, airy lighting, high-key photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANU1Y3YOwjIwP4ffxR2s6MntCTFnAg9UacDs13zQT1VIJvM6l8qb1HDTtLvZhQ0iHnGoeYYrupB8SOXSg7jNglxs5MSZere8_bhP5Bd_MiQw9qerEXoHR2ES1yQeOeLVcip7i0t7jCriH1h5binNI-wju1_4gwXFHfMGrPgIR-E_SjztkhCOaJzQx35ZaXUqJ3dXja_Kzl7ejEai_9JEi_BKUhmy8lmFgxpgpmWYvTiSdJxfqmvQTjwsTftUAQx-GVXfWyQh5cGs8"/>
+<p class="font-headline-md italic mb-6">"El servicio al cliente es excepcional. Me ayudaron a elegir el conjunto perfecto para mi evento."</p>
+<p class="font-label-caps">- Sofía Ruiz</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Galería Masonry -->
+<section class="py-section-gap px-margin-desktop max-w-container-max-width mx-auto">
+<div class="mb-stack-lg text-center reveal">
+<h2 class="font-headline-lg">Inspiración Olmo</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl mx-auto">Explora nuestro universo visual y descubre cómo combinar nuestras piezas favoritas.</p>
+</div>
+<div class="masonry gap-4">
+<div class="mb-4 break-inside-avoid reveal">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="Artistic fashion shot of a woman in a long flowing black dress walking through a minimalist concrete hallway. Strong shadows and bright highlights create a dramatic, editorial look. Professional high-fashion photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQAbB8m0eRe-U1vVgYfZmpze7SxcJMu_wPbMwMnDM98gjyaQj9EtoHk5zyhJjClm69z_b2s7mhIS1lTnw-YuBg_0IU-NVClAOOD4y5h1dZ3jvcUnl--y9nq-Rm_7Cvngn05ndNQrkhfCoqZIgHR6Hm3uwQc-GUbMAOayl-S1fhAarElpiAvhjfNvsniFiK7QTDdv8NGPgNxKJcD10v85DCqVKiIzuXD4Ii_Y4_PNyAATqfw84OvD3QOb9fTQPJq9k_gpF6R6E6bE"/>
+</div>
+<div class="mb-4 break-inside-avoid reveal" style="transition-delay: 100ms">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="Detailed close-up of a man's hand adjusting a silver watch over a premium black wool sleeve. The lighting is soft and moody, focusing on the texture of the fabric and the shine of the metal. Elegant and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMmQFPGVc2RlW0aOD6B3ty9sPsD7gvLyvxfMNhH9xFz9xYzTd8TA6GpA7-uPxOpU9if7peXWMUJZugrkvBI9onB-l5meh2PHKw-dfbTBbdRZOahpJAvpODGkgXblbdV5AFLslDMjdhR7K2Fjv1BXSWjb6LhLZTBtm7g5r17UvwrzRZ0KabkjAoTYViq2qHmS8QVvTAsfLdT-ns98spaZRA7gwhVYigrTqaFpuX_J-lh1gmzgM2O7wPROk7WMNjsYTEgHOHEMrZdbI"/>
+</div>
+<div class="mb-4 break-inside-avoid reveal" style="transition-delay: 200ms">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="A minimalist living room with a single high-end fashion magazine and a pair of designer shoes on a low oak table. The aesthetic is extremely clean, featuring a palette of whites, blacks, and natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8XtlPHm_L4ohyuiUys-DpcCm_1wyH6cwpY6-1GT33SaHozJscDkTctWk4iikjtZedqS_tnRQzEMDibOr2KKvLhtwMldebNuTY0n3QCSSZ9bHiMtU0IKhHfh_HXbO2rOHRM41HWkTIBeLAhLh1hCiYqqX2iZOC8RBfL4ATszd4lkMULqI4uCG5Kt3V_mHxdGcDriwbVi14YQ8SKgobDXJPIuTX3HBHLEeV0Ds8yu74nA7qGkvdy8jYwO1L2EsQSjLc3Flrv9aMQjU"/>
+</div>
+<div class="mb-4 break-inside-avoid reveal" style="transition-delay: 300ms">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="Two models standing back to back in a modern architectural space. One wears an olive green trench coat, the other a structured black blazer. The composition is symmetrical and high-fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9EDxwBExMgW4fkHSzYti4U03AxfeXJg_zbX05DCAF6-MFcB0oXqs8O3EbQdXGw5X8AqHJEO-_FY386RrLBxii3Ik4ZHiWHqAf9m7h_3pnz_B6KyVMaVr7WDbIg44z1zzACDaxvIu_Vpv1P9up0eV7Yh4vDdh7z7_OMXqK4i5fqJ_xZ45SNEXh18H3AvX31JIFjyeXWL3y24fp8OfIPO7MAxzU9clCXuWvp-rYDxYKokI24M-Ub1lbgx86NPRRoTuQ5O4vOaezLrc"/>
+</div>
+<div class="mb-4 break-inside-avoid reveal" style="transition-delay: 400ms">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="Close up of a rack of neutral toned clothes in a high-end boutique. The hangers are minimalist black metal. The focus is on the varying textures of silk, cotton, and wool. Soft boutique lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCex1yK-LiPb5Sn0I9ABGo1UG4kA7-YJR5NFbx9Kdhrbj1Byx8QagdP8IqXJEgMr4VHLuTmcTpLBpAKs45FMTFA236Db3NrdNx9D3DBiD0gTl3I9FbpkSHTP-NT-_Pk3SXcUyGW4TZXdI9yKO1Y5MJf4ThttPIOQB7ZE9fhXRiIKo0z9b57NTE6Dy9xyCdtf2grehI35SYIdVewQiHanh1j6GS-rPQZW1ox2u5-blAQNbPvhYtHQ48cN2HtOlNVVuGztU6AsGXvI5Q"/>
+</div>
+<div class="mb-4 break-inside-avoid reveal" style="transition-delay: 500ms">
+<img class="w-full h-auto rounded-lg hover:opacity-90 transition-opacity" data-alt="Fashion model sitting on a marble staircase wearing a monochromatic white outfit with a small black leather bag. The overall mood is serene and expensive. Soft diffused daylight lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk7C5MSpoXJT1jqq0EF_zGpK1o0M0pEY9ZjugpQt4Hv-kEaCSFcIMClKyyIFth4iFLbMI1YH5a6zdBChLyZ5RpUcfkuGQ5hqhdRJxq6jsSqXbB18BHBtvxxlJY8_n2IVb23q_a4zploI2WxUXU1fFvzsmIJG-qt10WwDa-kLELA5lARA2UwW2o5q-urxNF25qRfHiqs8zp7kV43xHhMNNtkHvf1wMVP0KaAhk2zO8Osk7dEbMpxsD8vWWdVIPeinsHf36VsfS8fUM"/>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative overflow-hidden bg-surface-container-high">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max-width mx-auto text-center reveal">
+<h2 class="font-display-xl text-display-xl-mobile md:text-display-xl mb-6">Renueva tu estilo hoy mismo.</h2>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-10">Nuestro equipo está listo para ayudarte a encontrar las prendas que definen tu personalidad única.</p>
+<button class="px-10 py-5 bg-primary text-on-primary font-button text-button hover:bg-secondary transition-all duration-300 flex items-center gap-3 mx-auto transform hover:scale-105">
+<span class="material-symbols-outlined">chat</span>
+                    Escríbenos por WhatsApp
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-primary-container text-on-surface dark:text-on-primary-container border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto py-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwBAeZ8y924m4t1BQ2pdx3Di18N6_3PUbrsblNvlsa1hq2Q9eOUXxbWtSEEym663UEg-xz6XMHmCyw4XjKtlrSJyh1MCHnaTXQvkP2HdWxe-oVlE0iwmaOVsBVk3ShfxdAxA8zfiuzaMng1jQbkKUNvyfTmRM1CaZ6jMkAVVzVhikUTjZolRBmr9AssU1_Ad5R3CZ81PHdHDUeLF7QmuaxL16FF8r9vm5NxBP45p1_rHipRc4IOOfv9LWYvyqZv0YcTNaDBkA87mM"/>
+<span class="font-headline-md text-primary dark:text-primary-fixed">Prendas Olmo</span>
+</div>
+<p class="font-body-md opacity-70 mb-6">Moda consciente y sofisticada para el estilo de vida contemporáneo.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps mb-6 text-primary">Tienda</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Mujer</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hombre</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Nuevas Colecciones</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Ofertas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps mb-6 text-primary">Soporte</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Envíos</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Devoluciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps mb-6 text-primary">Newsletter</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Recibe las últimas tendencias y ofertas exclusivas.</p>
+<form class="flex border-b border-primary">
+<input class="bg-transparent border-none focus:ring-0 w-full py-2 placeholder:text-outline" placeholder="Tu email" type="email"/>
+<button class="p-2" type="submit"><span class="material-symbols-outlined">arrow_forward</span></button>
+</form>
+</div>
+</div>
+<div class="border-t border-outline-variant px-margin-desktop max-w-container-max-width mx-auto py-6 flex flex-col md:flex-row justify-between items-center opacity-60">
+<p class="font-body-md">© 2024 Prendas Olmo. Todos los derechos reservados.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<span class="material-symbols-outlined">payments</span>
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // Header shadow on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.remove('h-16');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>
