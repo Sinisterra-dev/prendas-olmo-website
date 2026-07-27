@@ -130,3 +130,96 @@ document.querySelectorAll('.group').forEach(el => {
     el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
     observer.observe(el);
 });
+
+// ===================================
+// Mobile Menu (Minimal Implementation)
+// ===================================
+
+const menuButton = document.querySelector('button.md\\:hidden');
+let mobileMenu = null;
+let mobileMenuOverlay = null;
+
+if (menuButton) {
+    // Create mobile menu
+    mobileMenu = document.createElement('div');
+    mobileMenu.style.cssText = 'position:fixed;top:80px;left:0;right:0;background:#fcf9f8;border-bottom:1px solid #cfc4c5;transform:translateY(-100%);opacity:0;visibility:hidden;transition:all 0.3s ease;z-index:40;box-shadow:0 4px 6px rgba(0,0,0,0.1);';
+    
+    // Get current page path
+    const currentPath = window.location.pathname;
+    const isRoot = currentPath === '/' || currentPath.endsWith('/index.html');
+    
+    // Menu items
+    const menuItems = [
+        { text: 'Inicio', href: isRoot ? '/' : '../' },
+        { text: 'Mujer', href: isRoot ? 'mujer/' : '../mujer/' },
+        { text: 'Hombre', href: isRoot ? 'hombre/' : '../hombre/' },
+        { text: 'Colecciones', href: isRoot ? 'colecciones/' : '../colecciones/' },
+        { text: 'Ofertas', href: isRoot ? 'ofertas/' : '../ofertas/' },
+        { text: 'Nosotros', href: isRoot ? 'nosotros/' : '../nosotros/' },
+        { text: 'Contacto', href: isRoot ? 'contacto/' : '../contacto/' }
+    ];
+    
+    // Add links to menu
+    menuItems.forEach(item => {
+        const link = document.createElement('a');
+        link.href = item.href;
+        link.textContent = item.text;
+        link.style.cssText = 'display:block;padding:16px 20px;font-family:Montserrat,sans-serif;font-size:14px;letter-spacing:0.15em;font-weight:600;text-transform:uppercase;color:#1c1b1b;text-decoration:none;border-bottom:1px solid #e5e2e1;';
+        link.addEventListener('click', () => closeMenu());
+        mobileMenu.appendChild(link);
+    });
+    
+    // Create overlay
+    mobileMenuOverlay = document.createElement('div');
+    mobileMenuOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);opacity:0;visibility:hidden;transition:all 0.3s ease;z-index:35;';
+    mobileMenuOverlay.addEventListener('click', () => closeMenu());
+    
+    // Insert into DOM
+    const header = document.querySelector('header') || document.querySelector('nav');
+    if (header) {
+        header.parentNode.insertBefore(mobileMenu, header.nextSibling);
+    }
+    document.body.appendChild(mobileMenuOverlay);
+    
+    // Toggle menu
+    menuButton.addEventListener('click', () => {
+        const isOpen = mobileMenu.style.transform === 'translateY(0)';
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.style.transform === 'translateY(0)') {
+            closeMenu();
+        }
+    });
+    
+    // Close on resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && mobileMenu.style.transform === 'translateY(0)') {
+            closeMenu();
+        }
+    });
+}
+
+function openMenu() {
+    mobileMenu.style.transform = 'translateY(0)';
+    mobileMenu.style.opacity = '1';
+    mobileMenu.style.visibility = 'visible';
+    mobileMenuOverlay.style.opacity = '1';
+    mobileMenuOverlay.style.visibility = 'visible';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    mobileMenu.style.transform = 'translateY(-100%)';
+    mobileMenu.style.opacity = '0';
+    mobileMenu.style.visibility = 'hidden';
+    mobileMenuOverlay.style.opacity = '0';
+    mobileMenuOverlay.style.visibility = 'hidden';
+    document.body.style.overflow = '';
+}

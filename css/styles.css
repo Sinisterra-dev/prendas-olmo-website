@@ -119,3 +119,43 @@ body {
     break-inside: avoid;
     margin-bottom: 24px;
 }
+
+/* ===================================
+   Mobile Responsive (Minimal Changes)
+   =================================== */
+
+@media (max-width: 767px) {
+    /* Hide desktop navigation on mobile */
+    header .hidden.md\\:flex,
+    nav .hidden.md\\:flex {
+        display: none !important;
+    }
+    
+    /* Show hamburger button on mobile */
+    button.md\\:hidden {
+        display: flex !important;
+    }
+    
+    /* Adjust padding for mobile */
+    .px-margin-desktop {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    /* Adjust hero height for mobile */
+    section[class*="h-"] {
+        min-height: 60vh !important;
+        height: auto !important;
+    }
+    
+    /* Adjust text sizes for mobile */
+    .text-display-xl-mobile {
+        font-size: 32px !important;
+        line-height: 40px !important;
+    }
+    
+    .text-body-lg {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+}
